@@ -1,0 +1,8 @@
+Literal fresh Windows QUICKSTART install, case literal-b-simple-no-beads.
+Source: exact B 2343df83a3a26ae83bc66d4009dd67a913eeea4e (clean Git checkout D:/CodexArtifacts/overgate-rc4-winqa-20261103/source-2343df8), first install directly from B, no A->B upgrade, single apply.
+Installer flags: --no-beads. install-state: format 2, mode auto, beads false.
+Runtime: Claude Code 2.1.317, claude-fable-5-1, permissionMode auto (actual), cwd target root.
+Helpers in order: og-init-memory-bank.sh exit 0 (six files created); bd-bootstrap.sh SKIPPED (--no-beads, no .beads, no bd init/ready); og-protect-main.sh exit 0 (protection verified, readback).
+Project verifier .agents/project/verify.sh filled from exact template: PASS (README, exact source SHA, mode auto, strict beads False).
+Native audit installed: first run FAIL only on memory_six_exact caused by QA oracle error (canonical LF installed templates compared to CRLF source working tree; installer reads frozen Git blobs). Oracle corrected, byte-exact check of all six Memory files vs git show B:template all True (evidence/literal-b-memory-oracle-correction.json); initial audit kept as literal-b-simple-no-beads-initial-checkout-template-audit.json. No product/source/helper/managed payload changed. Re-run audit installed: PASS.
+Draft PR: https://github.com/komleff/overgate-rc4-b-simple-no-beads-20261104/pull/1 (merge left to operator).
